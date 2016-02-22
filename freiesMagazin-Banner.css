@@ -1,0 +1,241 @@
+@charset 'utf-8';
+
+/* Reset */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Banner Wrapper */
+
+.banner {
+	position: relative;
+	overflow: hidden;
+	width: 728px;
+	height: 90px;
+	background: #000 radial-gradient(circle, #666666 0%,#000000 100%);
+	color: #FFF;
+	font: 20px 'Calibri', 'Helvetica Neue', 'Arial', sans-serif;
+	perspective: 600px;
+}
+
+/* Clickpane */
+
+.banner .clickpane {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 728px;
+	height: 90px;
+}
+
+.banner .clickpane a {
+	display: block;
+	width: 728px;
+	height: 90px;
+}
+
+.banner .clickpane a span {
+	display: none;
+}
+
+/* Taglines */
+
+.banner .tagline {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 728px;
+	height: 90px;
+	padding: 35px 0;
+	text-align: center;
+	vertical-align: middle;
+	opacity: 0;
+}
+
+/* Tagline freiesMagazin */
+
+.banner .freiesmagazin {
+	background: transparent;
+	color: #F60;
+	font-size: 30px;
+	padding: 30px 0;
+}
+
+.banner .freiesmagazin span {
+	background: transparent;
+	color: #888;
+}
+
+/* iPad Image */
+
+.banner .ipad {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 174px;
+	height: 136px;
+	margin: -68px 0 0 -87px;
+	transform: rotateY(-30deg);
+	opacity: 0;
+}
+
+/* Keyframe Setup */
+
+.banner .tagline {
+	animation-duration: 14.5s;
+	animation-iteration-count: infinite;
+}
+
+.banner .tagline01 {
+	animation-name: fadeInOut01;
+}
+
+.banner .tagline02 {
+	animation-name: fadeInOut02;
+}
+
+.banner .freiesmagazin {
+	animation-name: fadeInOutFreiesMagazin;
+}
+
+.banner .tagline03 {
+	animation-name: fadeInOut03;
+}
+
+.banner .ipad {
+	animation: 14.5s ease-in infinite iPadFlyIn;
+}
+
+/* Keyframes */
+
+@keyframes fadeInOut01 {
+	0% {
+		opacity: 0;
+	}
+
+	6.89% {
+		opacity: 1;
+	}
+
+	17.24% {
+		opacity: 1;
+	}
+
+	24.13% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeInOut02 {
+	0% {
+		opacity: 0;
+	}
+
+	24.13% {
+		opacity: 0;
+	}
+
+	31.03% {
+		opacity: 1;
+	}
+
+	41.37% {
+		opacity: 1;
+	}
+
+	48.27% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeInOutFreiesMagazin {
+	0% {
+		opacity: 0;
+	}
+
+	48.27% {
+		opacity: 0;
+	}
+
+	55.17% {
+		opacity: 1;
+	}
+
+	65.51% {
+		opacity: 1;
+	}
+
+	72.41% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes iPadFlyIn {
+	0% {
+		opacity: 0;
+		left: 50%;
+		width: 174px;
+		height: 136px;
+	}
+
+	65.51% {
+		opacity: 0;
+		left: 50%;
+		width: 174px;
+		height: 136px;
+	}
+
+	72.41% {
+		opacity: 1;
+		left: 80%;
+	}
+
+	93.1% {
+		opacity: 1;
+		left: 80%;
+	}
+
+	100% {
+		opacity: 0;
+		left: 80%;
+		width: 210px;
+		height: 170px;
+	}
+}
+
+@keyframes fadeInOut03 {
+	0% {
+		opacity: 0;
+	}
+
+	75.86% {
+		opacity: 0;
+	}
+
+	82.75% {
+		opacity: 1;
+	}
+
+	93.1% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
